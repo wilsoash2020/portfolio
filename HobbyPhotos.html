@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Photography - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+        <div class="logo"><a href="index.html">Ashley Wilson</a></div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+				<li><a href="resume.html">Resume/CV</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="case-study-container">
+        <a href="projects.html" class="back-link">&larr; Back to All Projects</a>
+        
+        <h1 class="project-title">Personal Photography</h1>
+
+        <div class="project-hero-image">
+            <img src="images/vatican.JPG" alt="Imagine Dragons Image">
+        </div>
+
+        <section class="project-details">
+            <div class="detail-block ">
+                <h2 id="Packaging">Overview</h2>
+              <p>A collection of personal photography exploring different subjects, environments, and visual styles. These photographs were captured as a hobby and provide an opportunity to experiment with composition, lighting, perspective, and visual storytelling outside my professional work.</p>
+            </div>
+			
+			<section class="gallery-section">
+    <div class="image-grid">
+        <div class="grid-item"><img src="images/zionroad.jpeg" alt="Zion Road"></div>
+        <div class="grid-item"><img src="images/zion.png" alt="Zion"></div>
+        <div class="grid-item"><img src="images/slotcanyon.png" alt="Slot Canyon"></div>
+        <div class="grid-item"><img src="images/trees.jpg" alt="Sequoia Trees"></div>
+        <div class="grid-item"><img src="images/bigsur.png" alt="Big Sur"></div>
+        <div class="grid-item"><img src="images/joshuatree.png" alt="Joshua Tree"></div>
+        <div class="grid-item"><img src="images/flamingo.JPG" alt="Flamingos Curacao"></div>
+        <div class="grid-item"><img src="images/calibeach.JPG" alt="California Beach"></div>
+        <div class="grid-item"><img src="images/axamurlizum.jpeg" alt="Axamur Lizum"></div>
+        <div class="grid-item"><img src="images/mountain.jpeg" alt="Axamur Lizum Top"></div>
+        <div class="grid-item"><img src="images/florenceskyline.JPG" alt="Florence Skyline"></div>
+        <div class="grid-item"><img src="images/trevi.JPG" alt="Trevi Fountain"></div>
+		<div class="grid-item"><img src="images/rome.JPG" alt="Rome"></div>
+        <div class="grid-item"><img src="images/vaticanstairs2.JPG" alt="Vatican Stairs"></div>
+        <div class="grid-item"><img src="images/duomo.JPG" alt="Duomo Florence"></div>
+        <div class="grid-item"><img src="images/kufstein.JPG" alt="Kufstein"></div>
+        <div class="grid-item"><img src="images/chicago.jpg" alt="Chicago"></div>
+        <div class="grid-item"><img src="images/munichstation.JPG" alt="Munich"></div>
+        <div class="grid-item"><img src="images/penguins.JPG" alt="Penguins"></div>
+		<div class="grid-item"><img src="images/seal.jpeg" alt="Califonia Seals"></div>
+        <div class="grid-item"><img src="images/tobyyosemite.jpg" alt="Toby Yosemite"></div>
+        <div class="grid-item"><img src="images/tobyears.jpg" alt="Toby Shaking Head"></div>
+        <div class="grid-item"><img src="images/tobyps.JPG" alt="Toby Palm Springs"></div>
+        <div class="grid-item"><img src="images/ozzy.jpeg" alt="Ozzy"></div>
+        <div class="grid-item"><img src="images/marlijnbw.jpg" alt="Marlijn Black and White"></div>
+        <div class="grid-item"><img src="images/marlijnitaly.JPG" alt="Marlijn Italy"></div>
+        <div class="grid-item"><img src="images/marlijnfield.png" alt="Marlijn Senior Soccer"></div>
+        <div class="grid-item"><img src="images/marlijnunoh.png" alt="Marlijn Senior Campus Sign"></div>
+    </div>
+</section>
+			
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ashley Wilson Portfolio. All rights reserved. Built and designed by Ashley Wilson.</p>
+</footer>
+
+<div id="image-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Enlarged view">
+</div>
+	
+	<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.modal-close');
+    const gridImages = document.querySelectorAll('.grid-item img');
+
+    gridImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modal.classList.add('show');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target !== modalImg) {
+            modal.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+        }
+    });
+});
+</script>
+	
+</body>
+</html>
