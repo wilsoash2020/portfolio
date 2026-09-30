@@ -105,7 +105,7 @@ nav a:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
     gap: 30px;
 }
 
@@ -240,7 +240,7 @@ nav a.active {
 
 
 .project-hero-image img {
-    width: 150%;
+    width: 100%;
     max-height: 500px;
     object-fit: cover;
     border-radius: 8px;
@@ -977,7 +977,7 @@ video {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
-    transition: background-color 0.2s, transform 0
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .gif-portfolio-section {
@@ -1252,4 +1252,130 @@ video {
     align-items: center; 
     width: 100%;
     margin: 30px 0; 
+}
+
+@media (max-width: 1300px) {
+    .project-hero-image img { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px 20px;
+        position: static;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    #projects,
+    #projects-page {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        background-attachment: scroll;
+        height: 100vh;
+        height: 100svh;
+    }
+
+    #hero h1 { font-size: 2.2rem; }
+    #hero p  { font-size: 1.05rem; }
+}
+
+iframe { max-width: 100%; }
+
+@media (max-width: 768px) {
+    iframe[src*="figma"] {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    iframe[src*="drive.google"] {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 768px) {
+    #about-me-section {
+        padding: 40px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .about-image {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        flex: none;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-comparison-row1,
+    .image-comparison-row2,
+    .image-comparison-row3 {
+        flex-direction: column;
+        gap: 20px;
+        margin: 30px auto;
+    }
+
+    .image-column1 img,
+    .image-column2 img,
+    .image-column3 img {
+        height: auto;
+        aspect-ratio: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-container {
+        margin: 30px auto;
+        padding: 0 16px;
+    }
+
+    .project-title {
+        font-size: 2rem;
+        overflow-wrap: break-word;
+    }
+
+    .project-hero-image,
+    .project-hero-image1 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .project-hero-image img,
+    .project-hero-image1 img {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 4px 8px;
+    }
 }
