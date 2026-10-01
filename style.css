@@ -1380,15 +1380,8 @@ iframe { max-width: 100%; }
     }
 }
 
-/* Case Study Bullet Point Spacing */
-.detail-block ul {
-    margin-left: 25px;
-    padding-left: 20px;
-}
-
 @media (max-width: 768px) {
-    .detail-block ul {
-        margin-left: 10px;
-        padding-left: 25px;
+    .case-study-container li {
+        margin-left: 24px;
     }
 }
